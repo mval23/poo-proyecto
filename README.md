@@ -11,7 +11,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 ### Clases en el paquete "modeloNegocio"
 
 1. **Clase `Vehiculo`**
-    - Atributos: marca, modelo, año, número de chasis, tipo de vehículo.
+    - Atributos: marca, modelo, año, número de chasis, tipo de vehículo, motor, nombre, 
     - Métodos: getters y setters para los atributos.
 
 2. **Clase `DirectorCarrera`**
@@ -45,7 +45,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
 2. **Clase `VehiculoDeCarrera`** (hereda de `Vehiculo`)
-    - Atributo adicional: tipo de neumáticos.
+    - Atributo adicional: estado de neumáticos, estadoAleron, estadoFrenos.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
 ### Clases adicionales que heredan de una tercera
