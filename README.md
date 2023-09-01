@@ -23,7 +23,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Métodos: getters y setters para los atributos.
 
 4. **Clase `Equipo`**
-    - Atributos: nombre del equipo, país, lista de vehículos del equipo.
+    - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos
     - Métodos: getters y setters para los atributos.
 
 5. **Clase `Campeonato`**
