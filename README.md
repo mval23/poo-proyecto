@@ -1,14 +1,9 @@
 # Estructura del Proyecto de la Fédération Internationale de l'Automobile
 
-## Paquete "gestorAplicación"
-
-Este paquete contendría las clases relacionadas con la gestión de la aplicación.
-
-## Paquete "modeloNegocio"
 
 Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
-### Clases en el paquete "modeloNegocio"
+## Clases en el paquete "modeloNegocio"
 
 1. **Clase `Vehiculo`**
     - Atributos: marca, modelo, año, motor, nombre.
