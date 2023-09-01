@@ -14,21 +14,22 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
    - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos.
    - Métodos: getters y setters para los atributos.
 
-3. **Clase `Piloto`**
-   - Atributos: nombre, edad, equipo, puntos acumulados, victorias.
+3. **Clase `Piloto`** (hereda de `Persona`)
+   - Atributos: equipo, puntos acumulados, victorias.
    - Métodos: getters y setters para los atributos.
 
-4. **Clase `Patrocinador`**
-   - Atributos: nombre, país, tipo de patrocinio, porcentaje patrocinio.
-   - Métodos: getters y setters para los atributos, reclamar patrocinio, dar patrocinio, quitar patrocinio.
+4. **Clase `Patrocinador`** (hereda de `Persona`)
+   - Atributos: tipo de patrocinio, porcentaje patrocinio.
+   - Métodos: getters y setters, reclamar patrocinio, dar patrocinio, quitar patrocinio, hacer contrato.
 
-5. **Clase `DirectorCarrera`**
-    - Atributos: nombre, edad, licencia.
+5. **Clase `DirectorCarrera`** (hereda de `Persona`)
+    - Atributos: licencia
     - Métodos: getters y setters para los atributos, poner sanciones.
 
 6. **Clase `Carrera`**
     - Atributos: fecha, nombreCircuito, distancia, premio en efectivo, lugar.
     - Métodos: getters y setters para los atributos,
+    - 
 
 7. **Clase `Campeonato`**
     - Atributos: nombre del campeonato, año, lista de carreras del campeonato.
@@ -42,7 +43,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
 2. **Clase `VehiculoDeCarrera`** (hereda de `Vehiculo`)
-    - Atributo adicional: estado de neumáticos, estadoAleron, estadoFrenos.
+    - Atributo adicional: estado de neumáticos, estadoAleron, estadoFrenos, cantPitStops, estadoMotor.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
 ### Clases abstacta
@@ -68,7 +69,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
       - EquipoDeCarrera 
       - EquipoPatrocinado 
       - VehiculoDeCarrera
-
+      - Carrera
    
 ## Funcionalidad: Preparar Campeonato
 
@@ -108,17 +109,15 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Simula la ejecución de una carrera de Grand Prix, calculando las posiciones y los tiempos.
 
-**Clases involucradas:** `Carrera`, `Piloto`, `VehiculoDeCarrera`, `DirectorCarrera`
+**Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`
 
 **Métodos utilizados:**
-1. Método en `Carrera`: `simularCarrera()`
-2. Método en `Piloto`: `manejarVehiculo(puntos: number)`
-3. Método en `VehiculoDeCarrera`: `aumentarVelocidad(puntos: number)`
-4. Método en `VehiculoDeCarrera`: `disminuirVelocidad(puntos: number)`
-5. Método en `VehiculoDeCarrera`: `realizarPitStop()`
-6. Método en `DirectorCarrera`: `ponerSancion()`
-7. Método en `VehiculoDeCarrera`: `hacerManiobra()`
-8. Método en `VehiculoDeCarrera`: `accidentarse()`
+1. Método en `Carrera`: `simularCarrera()`]
+2. Método en `VehiculoDeCarrera`: `abrirAleron()`
+3. Método en `VehiculoDeCarrera`: `hacerManiobra()`
+4. Método en `VehiculoDeCarrera`: `realizarPitStop()`
+5. Método en `DirectorCarrera`: `ponerSancion()`
+6. Método en `VehiculoDeCarrera`: `accidentarse()`
 
 **Notas:**
 - Dar puntos a los pilotos
@@ -165,8 +164,6 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 - Poner puntos
 - Poner premios
 - Poner sanciones
-- Poner DNF
-
 
 
 ##Notas Adicionales
