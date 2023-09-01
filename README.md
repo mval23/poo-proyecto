@@ -5,35 +5,35 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Clases en el paquete "modeloNegocio"
 
-## Paddock  
 
 1. **Clase `Vehiculo`**
     - Atributos: marca, modelo, año, motor, nombre.
     - Métodos: getters y setters para los atributos.
 
-2. **Clase `DirectorCarrera`**
+2. **Clase `Equipo`**
+   - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos.
+   - Métodos: getters y setters para los atributos.
+
+3. **Clase `Piloto`**
+   - Atributos: nombre, edad, equipo, puntos acumulados, victorias.
+   - Métodos: getters y setters para los atributos.
+
+4. **Clase `Patrocinador`**
+   - Atributos: nombre, país, tipo de patrocinio, porcentaje patrocinio.
+   - Métodos: getters y setters para los atributos, reclamar patrocinio, dar patrocinio, quitar patrocinio.
+
+5. **Clase `DirectorCarrera`**
     - Atributos: nombre, edad, licencia.
     - Métodos: getters y setters para los atributos, poner sanciones.
 
-3. **Clase `Carrera`**
+6. **Clase `Carrera`**
     - Atributos: fecha, nombreCircuito, distancia, premio en efectivo, lugar.
-    - Métodos: getters y setters para los atributos, 
+    - Métodos: getters y setters para los atributos,
 
-4. **Clase `Equipo`**
-    - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos
-    - Métodos: getters y setters para los atributos.
-
-5. **Clase `Campeonato`**
+7. **Clase `Campeonato`**
     - Atributos: nombre del campeonato, año, lista de carreras del campeonato.
     - Métodos: getters y setters para los atributos.
 
-6. **Clase `Piloto`**
-    - Atributos: nombre, edad, equipo, puntos acumulados, victorias.
-    - Métodos: getters y setters para los atributos.
-
-7. **Clase `Patrocinador`**
-    - Atributos: nombre, país, tipo de patrocinio.
-    - Métodos: getters y setters para los atributos.
 
 ### Clases adicionales que implementan herencia
 
@@ -51,7 +51,25 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Atributo : nombreCompleto, id, pais.
     - Métodos adicionales: getters y setters.
 
+### Estructura
 
+### Estructura del Proyecto
+
+- gestorAplicación
+   - paddock
+      - Persona
+      - Vehiculo
+      - Piloto
+      - Patrocinador
+   - campeonato
+      - DirectorCarrera
+      - Campeonato
+      - Equipo
+      - EquipoDeCarrera 
+      - EquipoPatrocinado 
+      - VehiculoDeCarrera
+
+   
 ## Funcionalidad: Preparar Campeonato
 
 **Descripción:** Esta funcionalidad se encarga de configurar y organizar un nuevo campeonato de carreras de automóviles.
