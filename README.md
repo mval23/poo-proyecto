@@ -11,7 +11,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 ### Clases en el paquete "modeloNegocio"
 
 1. **Clase `Vehiculo`**
-    - Atributos: marca, modelo, año, número de chasis, tipo de vehículo, motor, nombre, 
+    - Atributos: marca, modelo, año, motor, nombre.
     - Métodos: getters y setters para los atributos.
 
 2. **Clase `DirectorCarrera`**
@@ -19,8 +19,8 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Métodos: getters y setters para los atributos, poner sanciones.
 
 3. **Clase `Carrera`**
-    - Atributos: fecha, lugar, distancia, premio en efectivo.
-    - Métodos: getters y setters para los atributos.
+    - Atributos: fecha, nombreCircuito, distancia, premio en efectivo, lugar.
+    - Métodos: getters y setters para los atributos, 
 
 4. **Clase `Equipo`**
     - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos
@@ -31,7 +31,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
     - Métodos: getters y setters para los atributos.
 
 6. **Clase `Piloto`**
-    - Atributos: nombre, edad, equipo, puntos acumulados.
+    - Atributos: nombre, edad, equipo, puntos acumulados, victorias.
     - Métodos: getters y setters para los atributos.
 
 7. **Clase `Patrocinador`**
@@ -40,23 +40,20 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ### Clases adicionales que implementan herencia
 
-1. **Clase `PilotoProfesional`** (hereda de `Piloto`)
-    - Atributo adicional: número de victorias.
+1. **Clase `EquipoDeCarrera`** (hereda de `Equipo`)
+    - Atributo adicional: lista de pilotos del equipo.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
 2. **Clase `VehiculoDeCarrera`** (hereda de `Vehiculo`)
     - Atributo adicional: estado de neumáticos, estadoAleron, estadoFrenos.
     - Métodos adicionales: getters y setters para el atributo adicional.
 
-### Clases adicionales que heredan de una tercera
+### Clases abstacta
 
-1. **Clase `EquipoDeCarrera`** (hereda de `Equipo`)
-    - Atributo adicional: lista de pilotos del equipo.
-    - Métodos adicionales: getters y setters para el atributo adicional.
+1. **Clase `Persona`**
+    - Atributo : nombreCompleto, id, pais.
+    - Métodos adicionales: getters y setters.
 
-2. **Clase `EquipoPatrocinado`** (hereda de `Equipo`)
-    - Atributo adicional: lista de patrocinadores del equipo.
-    - Métodos adicionales: getters y setters para el atributo adicional.
 
 ## Funcionalidad: Preparar Campeonato
 
