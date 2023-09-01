@@ -5,6 +5,8 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Clases en el paquete "modeloNegocio"
 
+## Paddock  
+
 1. **Clase `Vehiculo`**
     - Atributos: marca, modelo, año, motor, nombre.
     - Métodos: getters y setters para los atributos.
