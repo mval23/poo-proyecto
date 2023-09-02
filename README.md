@@ -7,44 +7,112 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 
 1. **Clase `Vehiculo`**
-    - Atributos: marca, modelo, año, motor, nombre.
-    - Métodos: getters y setters para los atributos.
+    - Atributos: 
+      - marca
+      - modelo
+      - año
+      - motor
+      - nombre.
+    - Métodos
+      - getters y setters para los atributos
 
 2. **Clase `Equipo`**
-   - Atributos: nombre del equipo, país, lista de vehículos del equipo, pilotos.
-   - Métodos: getters y setters para los atributos.
+   - Atributos
+     - nombre
+     - país
+     - vehículos del equipo
+     - pilotos
+   - Métodos
+     - getters y setters para los atributos
 
 3. **Clase `Piloto`** (hereda de `Persona`)
-   - Atributos: equipo, puntos acumulados, victorias.
-   - Métodos: getters y setters para los atributos.
+   - Atributos
+     - equipo
+     - puntos acumulados
+     - victorias
+     - sanciones
+     - cantidad pits stops
+   - Métodos: 
+     - getters y setters para los atributos
+     - registrarPitStop 
+     - calificarPiloto
 
 4. **Clase `Patrocinador`** (hereda de `Persona`)
-   - Atributos: tipo de patrocinio, porcentaje patrocinio.
-   - Métodos: getters y setters, reclamar patrocinio, dar patrocinio, quitar patrocinio, hacer contrato.
+   - Atributos
+     - tipo de patrocinio
+     - porcentaje patrocinio.
+   - Métodos
+     - getters y setters
+     - reclamar patrocinio
+     - hacer contrato.
 
 5. **Clase `DirectorCarrera`** (hereda de `Persona`)
-    - Atributos: licencia
-    - Métodos: getters y setters para los atributos, poner sanciones.
+    - Atributos: 
+      - licencia
+    - Métodos: 
+      - getters y setters para los atributos 
+      - poner sanciones
 
 6. **Clase `Carrera`**
-    - Atributos: fecha, nombreCircuito, distancia, premio en efectivo, lugar.
-    - Métodos: getters y setters para los atributos,
-    - 
+    - Atributos
+      - fecha
+      - nombreCircuito
+      - distancia
+      - premio en efectivo
+      - lugar
+      - lista de pilotos
+      - lista de equipos
+      - director de carrera.
+      - campeonato
+    - Métodos: 
+      - getters y setters para los atributos=
+      - simularCarrera.
+      - calificarCarrera
 
 7. **Clase `Campeonato`**
-    - Atributos: nombre del campeonato, año, lista de carreras del campeonato.
-    - Métodos: getters y setters para los atributos.
+    - Atributos
+      - nombre del campeonato
+      - año
+      - lista de carreras del campeonato
+      - cantidad Carreras
+      - lista de equipos
+    - Métodos:
+      - getters y setters para los atributos
 
 
 ### Clases adicionales que implementan herencia
 
 1. **Clase `EquipoDeCarrera`** (hereda de `Equipo`)
-    - Atributo adicional: lista de pilotos del equipo.
-    - Métodos adicionales: getters y setters para el atributo adicional.
+    - Atributo adicional: 
+      - pilotos a competir
+      - partes disponibles
+      - contrato
+      - puntos acumulados
+    - Métodos adicionales: 
+      - getters y setters para el atributo adicional
+      - calificarEquipo
+      - actualizarPartesDisponibles
+      - hacerContrato
+      - calificarEquipo
+      - disponibilidadPartes
 
 2. **Clase `VehiculoDeCarrera`** (hereda de `Vehiculo`)
-    - Atributo adicional: estado de neumáticos, estadoAleron, estadoFrenos, cantPitStops, estadoMotor.
-    - Métodos adicionales: getters y setters para el atributo adicional.
+    - Atributo adicional: 
+      - estado de neumáticos
+      - estadoAleron
+      - estadoFrenos
+      - cantPitStops
+      - estadoMotor.
+    - Métodos adicionales:
+      - abrirAleron
+      - hacerManiobra
+      - realizarPitStop
+      - accidentarse
+      - cambiarLlantas
+      - cambiarAleron
+      - cambiarMotor
+      - cambiarFrenos
+      - realizarMantenimiento
 
 ### Clases abstacta
 
@@ -80,8 +148,8 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 **Métodos utilizados:**
 1. Método en `Campeonato`: `agregarCarrera(carrera: Carrera)`
 2. Método en `Carrera`: `asignarCampeonato(campeonato: Campeonato)`
-3. Método en `Equipo`: `asignarCarrera(carrera: Carrera)`
-4. Método en `Campeonato`: `elegirEquipos(equipos: [Equipo])`
+3. Método en `Campeonato`: `elegirEquipos(equipos: Equipo)`
+4. Método en `Campeonato`: `cantidadCarreras(carreras: Carrera)`
 
 **Notas:**
 - Decir cuantas carreras
@@ -92,15 +160,17 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Esta funcionalidad se enfoca en la planificación de un evento de Grand Prix, definiendo lugar, fecha y distancia de la carrera.
 
-**Clases involucradas:** `Carrera`, `Piloto`, `Equipo`, `DirectorCarrera
+**Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `DirectorCarrera`, `Patrocinador`
 
 **Métodos utilizados:**
 1. Método en `Carrera`: `definirLugar(lugar: string)`
 2. Método en `Carrera`: `definirFecha(fecha: Date)`
-3. Método en `Carrera`: `definirDistancia(distancia: number)`
-4. Método en `Carrera`: `definirPremio(premio: number)`
+3. Método en `Carrera`: `definirDistancia(distancia: int)`
+4. Método en `Carrera`: `definirPremio(premio: float)`
 5. Método en `Carrera`: `asignarPilotos(pilotos: [Piloto])`
 6. Método en `Carrera`: `asignarDirector(DirectorCarrera: directorCarrera)`
+7. Método en `EquipoDeCarrera`: `hacerContrato(patrocinadores: [Patrocinador])`
+8. Método en `Patrocinador`: `hacerContrato(equipo: Equipo)`
 
 **Notas:**
 - Dos pilotos por equipo
@@ -112,7 +182,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 **Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`
 
 **Métodos utilizados:**
-1. Método en `Carrera`: `simularCarrera()`]
+1. Método en `Carrera`: `simularCarrera()`
 2. Método en `VehiculoDeCarrera`: `abrirAleron()`
 3. Método en `VehiculoDeCarrera`: `hacerManiobra()`
 4. Método en `VehiculoDeCarrera`: `realizarPitStop()`
@@ -133,12 +203,13 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Métodos utilizados:**
 1. Método en `VehiculoDeCarrera`: `realizarMantenimiento()`
-2. Método en `EquipoDeCarrera`: `registrarPitStop(vehiculo: VehiculoDeCarrera)`
-3. Método en `EquipoDeCarrera`: `realizarAjustes(vehiculo: VehiculoDeCarrera)`
-4. Método en `VehiculoDeCarrera`: `cambiarLlantas()`
-5. Método en `VehiculoDeCarrera`: `cambiarAleron()`
-6. Método en `VehiculoDeCarrera`: `cambiarMotor()`
-7. Método en `VehiculoDeCarrera`: `cambiarFrenos()`
+2. Método en `Piloto`: `registrarPitStop(vehiculo: VehiculoDeCarrera)`
+3. Método en `EquipoDeCarrera`: `actualizarPartesDisponibles(parte: String)`
+4. Método en `EquipoDeCarrera`: `disponibilidadPartes(parte: String)`
+5. Método en `VehiculoDeCarrera`: `cambiarLlantas()`
+6. Método en `VehiculoDeCarrera`: `cambiarAleron()`
+7. Método en `VehiculoDeCarrera`: `cambiarMotor()`
+8. Método en `VehiculoDeCarrera`: `cambiarFrenos()`
 
 **Notas:**
 - Cambia las posiciones
@@ -150,13 +221,14 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Evalúa el rendimiento de los pilotos en una carrera, otorga puntos y premios a los mejores.
 
-**Clases involucradas:** `Carrera`, `Piloto`, `Equipo`
+**Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `Patrocinador`
 
 **Métodos utilizados:**
 1. Método en `Carrera`: `calificarCarrera()`
-2. Método en `Piloto`: `calificarPiloto(puntos: number)`
-3. Método en `Equipo`: `calificarEquipo(puntos: number)`
-
+2. Método en `Piloto`: `calificarPiloto(puntos: int)`
+3. Método en `EquipoDeCarrera`: `calificarEquipo(puntos: int)`
+4. Método en `Patrocinador`: `reclamarPatrocinio(dinero: float)`
+   
 **Notas:**
 - Tablita chevere
 - Poner tiempos
@@ -166,8 +238,9 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 - Poner sanciones
 
 
-##Notas Adicionales
+## Notas Adicionales
 - cada carrera tiene contratos, si tiene entra a la programacion del campeonato
 - cada equipo tiene 5 motores disponibles para el campeonato
 - le hacen partes para controlar
 - si se pasan de partes 
+
