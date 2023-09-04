@@ -189,6 +189,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 ## Funcionalidad: Simulación de Grand Prix
 
 **Descripción:** Esta funcionalidad se encarga de simular la ejecución de una carrera de Grand prix, asignando posiciones, puntuaciones, sanciones y tiempos. Es aquí donde se darán las especificaciones de cada vehículo asignado a cada piloto para determinada carrera.
+
 **Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`, `Piloto`
 
 **Métodos utilizados:**
