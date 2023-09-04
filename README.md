@@ -232,6 +232,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 2. Método en `Piloto`: `calificarPiloto(puntos: int)`
 3. Método en `EquipoDeCarrera`: `calificarEquipo(puntos: int)`
 4. Método en `Patrocinador`: `reclamarPatrocinio(dinero: float)`
+5. Metodo en `DirectorCarreta`: `ponerSancion(piloto: Piloto)`
    
 **Notas:**
 - Tablita chevere
