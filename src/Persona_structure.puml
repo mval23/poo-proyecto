@@ -1,0 +1,240 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Persona",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1023408114 { 
+   	label=Patrocinador
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Patrocinador1023408114[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Patrocinador</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   porcentajePatrocinio: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   tipoDePatrocinio: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ hacerContrato()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ reclamarPatrocinio()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1904337705 { 
+   	label=Piloto
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Piloto1904337705[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Piloto</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   cantidadPitStops: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   equipo: Equipo [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   puntosAcumulados: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   sanciones: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   victorias: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calificarPiloto()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ registrarPitStop()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2075956906 { 
+   	label=Carrera
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Carrera2075956906[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Carrera</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   campeonato: Campeonato [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   directorDeCarrera: DirectorCarrera [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   distancia: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   fecha: Date [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listaDeEquipos: ArrayList&lt;Equipo&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listaDePilotos: ArrayList&lt;Piloto&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   lugar: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreCircuito: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   premioEnEfectivo: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calificarCarrera()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ simularCarrera()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_396163114 { 
+   	label=DirectorCarrera
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   DirectorCarrera396163114[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DirectorCarrera</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   licencia: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ ponerSanciones()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_795464953 { 
+   	label=Campeonato
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Campeonato795464953[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Campeonato</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   año: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   cantidadCarreras: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listaDeCarrerasDelCampeonato: ArrayList&lt;Carrera&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   listaDeEquipos: ArrayList&lt;Equipo&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreDelCampeonato: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_986212236 { 
+   	label=Persona
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Persona986212236[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Persona</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   id: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombreCompleto: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   pais: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Campeonato795464953 -> Carrera2075956906[label="listaDeCarrerasDelCampeonato
+[0..*]"];
+Carrera2075956906 -> DirectorCarrera396163114[label="directorDeCarrera
+[0..1]"];
+Persona986212236 -> DirectorCarrera396163114[arrowhead=none, arrowtail=empty, dir=both];
+Persona986212236 -> Patrocinador1023408114[arrowhead=none, arrowtail=empty, dir=both];
+Persona986212236 -> Piloto1904337705[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml

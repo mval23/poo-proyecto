@@ -146,10 +146,12 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 **Clases involucradas:** `Campeonato`, `Carrera`, `Equipo`
 
 **Métodos utilizados:**
-1. Método en `Campeonato`: `agregarCarrera(carrera: Carrera)`
-2. Método en `Carrera`: `asignarCampeonato(campeonato: Campeonato)`
-3. Método en `Campeonato`: `elegirEquipos(equipos: Equipo)`
-4. Método en `Campeonato`: `cantidadCarreras(carreras: Carrera)`
+1. Método en `Campeonato`: `prepararCampeonato(nombre: string)`
+2. Método en `Campeonato`: `agregrCarrera(carrera: Carrera)`
+3. Método en `Carrera`: `setCampeonato(campeonato: Campeonato)`
+4. Método en `Campeonato`: `setEquipos(equipos: Equipo)`
+5. Método en `Campeonato`: `setCantidadCarreras(cantidad: int)`
+6. Método en `Patrocinador`: `hacerContrato(piloto: Piloto)`
 
 **Notas:**
 - Decir cuantas carreras
