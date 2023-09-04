@@ -8,116 +8,125 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 1. **Clase `Vehiculo`**
     - Atributos: 
-      - marca
-      - modelo
-      - año
-      - motor
-      - nombre.
+      - marca: String
+      - modelo: String
+      - ano: int
+      - motor: String
+      - nombre: String
     - Métodos
-      - getters y setters para los atributos
+      - getters y setters 
 
 2. **Clase `Equipo`**
    - Atributos
-     - nombre
-     - país
-     - vehículos del equipo
-     - pilotos
+     - nombre: String
+     - pais: String
+     - vehiculos: ArrayList<Vehiculo>
+     - pilotos: ArrayList<Piloto>       
+     - contrato: boolean
    - Métodos
      - getters y setters para los atributos
 
 3. **Clase `Piloto`** (hereda de `Persona`)
    - Atributos
-     - equipo
-     - puntos acumulados
-     - victorias
-     - sanciones
-     - cantidad pits stops
+     - equipo: Equipo
+     - puntos: int
+     - victorias: int
+     - contrato: boolean
+     - sanciones: int
+     - cantidadPitStops: int
+     - dinero: int
+     - vehiculoCarrera: VehiculoCarrera
    - Métodos: 
      - getters y setters para los atributos
-     - registrarPitStop 
-     - calificarPiloto
+     - agregarVictorias(): void 
+     - agregarSanciones(int): void
+     - registrarPitStop(): void
+     - calificarPiloto(): void
 
 4. **Clase `Patrocinador`** (hereda de `Persona`)
    - Atributos
-     - tipo de patrocinio
-     - porcentaje patrocinio.
+     - tipoPatrocinio: String
+     - porcentajePatrocinio: int
+     - dinero: double
    - Métodos
      - getters y setters
-     - reclamar patrocinio
-     - hacer contrato.
+     - reclamarPatrocinio(): int
+     - hacerContrato(equipo: Equipo): void
 
 5. **Clase `DirectorCarrera`** (hereda de `Persona`)
     - Atributos: 
       - licencia
     - Métodos: 
       - getters y setters para los atributos 
-      - poner sanciones
+      + ponerSanciones(piloto: Piloto): void
+      + renovarLicencia(): void
 
 6. **Clase `Carrera`**
     - Atributos
-      - fecha
-      - nombreCircuito
-      - distancia
-      - premio en efectivo
-      - lugar
-      - lista de pilotos
-      - lista de equipos
-      - director de carrera.
-      - campeonato
+      - fecha: Date
+      - nombreCircuito: String
+      - distancia: double
+      - premioEfectivo: double
+      - lugar: String
+      - directorCarrera: DirectorCarrera
+      - campeonato: Campeonato
+      - puestos: ArrayList<Piloto>
+      - equiposCarrera: ArrayList<EquiposCarrera>
     - Métodos: 
       - getters y setters para los atributos=
-      - simularCarrera.
-      - calificarCarrera
+      - simularCarrera(): void
+      + premiacion(): void
 
 7. **Clase `Campeonato`**
     - Atributos
-      - nombre del campeonato
-      - año
-      - lista de carreras del campeonato
-      - cantidad Carreras
-      - lista de equipos
+      - nombre: String
+      - ano: int
+      - listaCarreras: ArrayList<Carrera>
+      - cantidadCarreras: int
+      - listaEquipos: ArrayList<EquiposCarrera>
     - Métodos:
       - getters y setters para los atributos
-
+      - planearCampeonato(): void
+      + agregarCarrera(carrera: Carrera): void
+      + premiacion(): void
 
 ### Clases adicionales que implementan herencia
 
 1. **Clase `EquipoDeCarrera`** (hereda de `Equipo`)
     - Atributo adicional: 
-      - pilotos a competir
-      - partes disponibles
-      - contrato
-      - puntos acumulados
+      - pilotosCompetir: ArrayList<Piloto>
+      - puntos: int
+      - partesDisponibles: ArrayList<String>
     - Métodos adicionales: 
       - getters y setters para el atributo adicional
-      - calificarEquipo
-      - actualizarPartesDisponibles
-      - hacerContrato
-      - calificarEquipo
-      - disponibilidadPartes
+      + calificarEquipo(): void
+      + disponibilidadParte(parte: String): void
+      + actualizarParte(parte: String): void
 
 2. **Clase `VehiculoDeCarrera`** (hereda de `Vehiculo`)
     - Atributo adicional: 
-      - estado de neumáticos
-      - estadoAleron
-      - estadoFrenos
-      - cantPitStops
-      - estadoMotor.
+      - estadoNeumaticos: boolean
+      - estadoAleron: boolean
+      - estadoFrenos: boolean
+      - estadoMotor: boolean
+      - cantPitStops: int
     - Métodos adicionales:
-      - abrirAleron
-      - hacerManiobra
-      - realizarPitStop
-      - accidentarse
-      - cambiarLlantas
-      - cambiarAleron
-      - cambiarMotor
-      - cambiarFrenos
-      - realizarMantenimiento
+      + abrirAleron(): void
+      + hacerManiobra(): void
+      + realizarPitStop(): void
+      + cambiarLlantas(equipo: Equipo): void
+      + cambiarMotor(equipo: Equipo): void
+      + cambiarFrenos(equipo: Equipo): void
+      + cambiarAleron(equipo: Equipo): void
+      + realizarMantenimiento(): void
 
 ### Clases abstacta
 
 1. **Clase `Persona`**
-    - Atributo : nombreCompleto, id, pais.
+    - Atributo : 
+       - nombreCompleto: String
+       - id: int
+       - pais: String
     - Métodos adicionales: getters y setters.
 
 ### Estructura
