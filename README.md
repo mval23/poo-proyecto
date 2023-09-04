@@ -165,14 +165,15 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 **Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `DirectorCarrera`, `Patrocinador`
 
 **Métodos utilizados:**
-1. Método en `Carrera`: `definirLugar(lugar: string)`
-2. Método en `Carrera`: `definirFecha(fecha: Date)`
-3. Método en `Carrera`: `definirDistancia(distancia: int)`
-4. Método en `Carrera`: `definirPremio(premio: float)`
-5. Método en `Carrera`: `asignarPilotos(pilotos: [Piloto])`
-6. Método en `Carrera`: `asignarDirector(DirectorCarrera: directorCarrera)`
-7. Método en `EquipoDeCarrera`: `hacerContrato(patrocinadores: [Patrocinador])`
-8. Método en `Patrocinador`: `hacerContrato(equipo: Equipo)`
+1. Método en `Carrera`: `setLugar(lugar: string)`
+2. Método en `Carrera`: `setFecha(fecha: Date)`
+3. Método en `Carrera`: `setDistancia(distancia: int)`
+4. Método en `Carrera`: `setPremio(premio: float)`
+5. Método en `Carrera`: `setPilotos(pilotos: [Piloto])`
+6. Método en `Carrera`: `setDirector(DirectorCarrera: directorCarrera)`
+7. Método en `Carrera`: `setEquipos(equipos: [EquipoDeCarrera])`
+8. Método en `Piloto`: `setVehiculoCarrera(vehiculoCarrera: VehiculoCarrera)`
+9. Método en `EquipoDeCarrera`: `setPilotos(pilotos: [Piloto])`
 
 **Notas:**
 - Dos pilotos por equipo
@@ -212,6 +213,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 6. Método en `VehiculoDeCarrera`: `cambiarAleron()`
 7. Método en `VehiculoDeCarrera`: `cambiarMotor()`
 8. Método en `VehiculoDeCarrera`: `cambiarFrenos()`
+9. Método en `VehiculoDeCarrera`: `realizarMantenimiento()`
 
 **Notas:**
 - Cambia las posiciones
@@ -226,7 +228,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 **Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `Patrocinador`
 
 **Métodos utilizados:**
-1. Método en `Carrera`: `calificarCarrera()`
+1. Método en `Carrera`: `premiacion()`
 2. Método en `Piloto`: `calificarPiloto(puntos: int)`
 3. Método en `EquipoDeCarrera`: `calificarEquipo(puntos: int)`
 4. Método en `Patrocinador`: `reclamarPatrocinio(dinero: float)`
