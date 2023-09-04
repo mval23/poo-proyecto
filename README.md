@@ -151,7 +151,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
    
 ## Funcionalidad: Preparar Campeonato
 
-**Descripción:** Esta funcionalidad se encarga de configurar y organizar un nuevo campeonato de carreras de automóviles.
+**Descripción:** Esta funcionalidad se encarga de configurar y organizar un nuevo campeonato de carreras de F1 a partir de la asignación del campeonato, las carreras que se harán y los equipos que participarán.
 
 **Clases involucradas:** `Campeonato`, `Carrera`, `Equipo`, `Patrocinador`, `EquipoCarrera`, `Piloto`
 
@@ -171,8 +171,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Funcionalidad: Planear Grand Prix
 
-**Descripción:** Esta funcionalidad se enfoca en la planificación de un evento de Grand Prix, definiendo lugar, fecha y distancia de la carrera.
-
+**Descripción:** Esta funcionalidad se encarga de la planeación de cada carrera, definiendo el lugar, la fecha, la distancia, el premio, los pilotos que competirán de acuerdo al equipo, el encargado de la dirección de la carrera y los patrocinadores de cada equipo
 **Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `DirectorCarrera`, `VehiculoDeCarrera`
 
 **Métodos utilizados:**
@@ -189,8 +188,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Funcionalidad: Simulación de Grand Prix
 
-**Descripción:** Simula la ejecución de una carrera de Grand Prix, calculando las posiciones y los tiempos.
-
+**Descripción:** Esta funcionalidad se encarga de simular la ejecución de una carrera de Grand prix, asignando posiciones, puntuaciones, sanciones y tiempos. Es aquí donde se darán las especificaciones de cada vehículo asignado a cada piloto para determinada carrera.
 **Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`, `Piloto`
 
 **Métodos utilizados:**
@@ -210,7 +208,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Funcionalidad: Pits (Mantenimiento al Carro)
 
-**Descripción:** Gestiona el proceso de parada en los pits para mantenimiento y ajustes de los vehículos durante una carrera.
+**Descripción:** Esta funcionalidad se encarga de gestionar el proceso en parada de boxes de cada piloto con su respectivo vehículo, es acá donde el equipo técnico le da mantenimiento a cada vehículo durante una carrera por medio del cambio de partes de la carrocería de acuerdo a la disponibilidad de las mismas. Estas paradas pueden afectar en el resultado final de la carrera tanto en puntaje como en posición.
 
 **Clases involucradas:** `VehiculoDeCarrera`, `EquipoDeCarrera`, `Piloto`
 
@@ -233,7 +231,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 ## Funcionalidad: Calificar Rendimiento en una Carrera y Premiación del Grand Prix
 
-**Descripción:** Evalúa el rendimiento de los pilotos en una carrera, otorga puntos y premios a los mejores.
+**Descripción:** Esta funcionalidad evalúa los resultados de cada carrera, a nivel de piloto y equipo técnico, se califica cada uno de estos aspectos con un puntaje y de acuerdo a las posiciones se otorgan los premios. Tambien permite el pago de los patrocinadores a sus respectivos equipos.
 
 **Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `Patrocinador`
 
