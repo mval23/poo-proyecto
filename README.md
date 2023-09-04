@@ -163,9 +163,12 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 5. Método en `EquipoCarrera`: `setPilotos(piloto1: Piloto, piloto1: Piloto)`
 6. Método en `Campeonato`: `setCantidadCarreras(cantidad: int)`
 7. Método en `Patrocinador`: `hacerContrato(piloto: Piloto)`
+8. Método en `Patrocinador`: `hacerContrato(equipo: Equipo)`
 
 **Notas:**
 - Decir cuantas carreras
+- Revisar que los pilotos tengan contratos
+- Revisar que los equipos tengan contratos
 - Imprimir algo asi chevere como tablita
 - Fecha general del campeonato
 
