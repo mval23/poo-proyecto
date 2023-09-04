@@ -42,6 +42,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
      - agregarSanciones(int): void
      - registrarPitStop(): void
      - calificarPiloto(): void
+     - agregarPuntos(int): void
 
 4. **Clase `Patrocinador`** (hereda de `Persona`)
    - Atributos
@@ -152,7 +153,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Esta funcionalidad se encarga de configurar y organizar un nuevo campeonato de carreras de automóviles.
 
-**Clases involucradas:** `Campeonato`, `Carrera`, `Equipo`
+**Clases involucradas:** `Campeonato`, `Carrera`, `Equipo`, `Patrocinador`, `EquipoCarrera`, `Piloto`
 
 **Métodos utilizados:**
 1. Método en `Campeonato`: `prepararCampeonato(nombre: string)`
@@ -172,7 +173,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Esta funcionalidad se enfoca en la planificación de un evento de Grand Prix, definiendo lugar, fecha y distancia de la carrera.
 
-**Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `DirectorCarrera`, `Patrocinador`
+**Clases involucradas:** `Carrera`, `Piloto`, `EquipoDeCarrera`, `DirectorCarrera`, `VehiculoDeCarrera`
 
 **Métodos utilizados:**
 1. Método en `Carrera`: `setLugar(lugar: string)`
@@ -190,7 +191,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Descripción:** Simula la ejecución de una carrera de Grand Prix, calculando las posiciones y los tiempos.
 
-**Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`
+**Clases involucradas:** `Carrera`, `VehiculoDeCarrera`, `DirectorCarrera`, `Piloto`
 
 **Métodos utilizados:**
 1. Método en `Carrera`: `simularCarrera()`
@@ -199,6 +200,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 4. Método en `VehiculoDeCarrera`: `realizarPitStop()`
 5. Método en `DirectorCarrera`: `ponerSancion()`
 6. Método en `VehiculoDeCarrera`: `accidentarse()`
+7. Método en `Piloto`: `agregarPuntos()`
 
 **Notas:**
 - Dar puntos a los pilotos
@@ -214,7 +216,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 
 **Métodos utilizados:**
 1. Método en `VehiculoDeCarrera`: `realizarMantenimiento()`
-2. Método en `Piloto`: `registrarPitStop(vehiculo: VehiculoDeCarrera)`
+2. Método en `Piloto`: `agregarPitStop(vehiculo: VehiculoDeCarrera)`
 3. Método en `EquipoDeCarrera`: `actualizarPartesDisponibles(parte: String)`
 4. Método en `EquipoDeCarrera`: `disponibilidadPartes(parte: String)`
 5. Método en `VehiculoDeCarrera`: `cambiarLlantas()`
