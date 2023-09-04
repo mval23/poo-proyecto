@@ -67,7 +67,7 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
       - nombreCircuito: String
       - distancia: double
       - premioEfectivo: double
-      - lugar: String
+      - lugar: String - es un enum, cada ciudad trae la distancia
       - directorCarrera: DirectorCarrera
       - campeonato: Campeonato
       - puestos: ArrayList<Piloto>
