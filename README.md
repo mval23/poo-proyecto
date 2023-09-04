@@ -159,8 +159,9 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 2. Método en `Campeonato`: `agregrCarrera(carrera: Carrera)`
 3. Método en `Carrera`: `setCampeonato(campeonato: Campeonato)`
 4. Método en `Campeonato`: `setEquipos(equipos: Equipo)`
-5. Método en `Campeonato`: `setCantidadCarreras(cantidad: int)`
-6. Método en `Patrocinador`: `hacerContrato(piloto: Piloto)`
+5. Método en `EquipoCarrera`: `setPilotos(piloto1: Piloto, piloto1: Piloto)`
+6. Método en `Campeonato`: `setCantidadCarreras(cantidad: int)`
+7. Método en `Patrocinador`: `hacerContrato(piloto: Piloto)`
 
 **Notas:**
 - Decir cuantas carreras
@@ -178,11 +179,9 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 2. Método en `Carrera`: `setFecha(fecha: Date)`
 3. Método en `Carrera`: `setDistancia(distancia: int)`
 4. Método en `Carrera`: `setPremio(premio: float)`
-5. Método en `Carrera`: `setPilotos(pilotos: [Piloto])`
-6. Método en `Carrera`: `setDirector(DirectorCarrera: directorCarrera)`
-7. Método en `Carrera`: `setEquipos(equipos: [EquipoDeCarrera])`
-8. Método en `Piloto`: `setVehiculoCarrera(vehiculoCarrera: VehiculoCarrera)`
-9. Método en `EquipoDeCarrera`: `setPilotos(pilotos: [Piloto])`
+5. Método en `Carrera`: `setDirector(DirectorCarrera: directorCarrera)`
+6. Método en `Carrera`: `setEquipos(equipos: [EquipoDeCarrera])`
+7. Método en `Piloto`: `setVehiculoCarrera(vehiculoCarrera: VehiculoCarrera)`
 
 **Notas:**
 - Dos pilotos por equipo
