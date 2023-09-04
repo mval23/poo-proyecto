@@ -182,7 +182,6 @@ Aquí se ubicarán las clases relacionadas con la lógica de negocio.
 5. Método en `Carrera`: `setDirector(DirectorCarrera: directorCarrera)`
 6. Método en `Carrera`: `setEquipos(equipos: [EquipoDeCarrera])`
 7. Método en `Piloto`: `setVehiculoCarrera(vehiculoCarrera: VehiculoCarrera)`
-8. Método en `EquipoDeCarrera`: `setPilotos(pilotos: [Piloto])`
 
 **Notas:**
 - Dos pilotos por equipo
